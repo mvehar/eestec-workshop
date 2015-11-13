@@ -1,0 +1,22 @@
+<html ng-app="myApp">
+  <head>
+    <title>Sample page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.min.js"></script>
+    <script src="myapp.js"></script>
+  </head>
+  <body ng-controller="appController">
+    <h1>Hope it's working !</h1>
+    <span>Value is {{counter}}</span>
+    <button ng-click="click();">Increase</button>
+
+    <div>
+      <h3>This room's temperature is currently <span ng-bind="temp_ws">No data</span></h3>
+      <h3>A place with a lot cooler temperature is <span ng-bind="temp_alex">No data</span></h3>
+    </div>
+    <div>
+      <button type="button" name="button" ng-click='switch_led("red")'>Switch {{ led_state['red']?"on":"off" }} the red led</button>
+      <button type="button" name="button" ng-click='switch_led("yellow")'>Switch {{ led_state['yellow']?"on":"off" }} the yellow led</button>
+      <button type="button" name="button" ng-click='switch_led("green")'>Switch {{ led_state['green']?"on":"off" }} the green led</button>
+    </div>
+  </body>
+</html>
